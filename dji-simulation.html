@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJI Simulation | Tahsincan Köse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .project-hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="glass-panel"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 100; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo" style="font-weight: 700; font-size: 1.2rem;">Tahsincan <span
+                style="color: var(--accent-color);">Köse</span></div>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--text-primary); font-size: 0.9rem;">Back to Home</a>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <h1>DJI M100 Gazebo Stack</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 1rem;">Comprehensive Simulation
+            Environment</p>
+        <div class="tech-stack">
+            <span class="tech-badge">Gazebo</span>
+            <span class="tech-badge">HITL/SITL</span>
+            <span class="tech-badge">DJI SDK</span>
+            <span class="tech-badge">ROS</span>
+        </div>
+    </section>
+
+    <section class="project-content glass-panel">
+        <img src="assets/img/dji.png" alt="DJI Simulation"
+            style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+
+        <h2>Project Overview</h2>
+        <p>This stack is developed specifically for Gazebo with two modes: HITL (Hardware-in-the-Loop) and SITL
+            (Software-in-the-Loop). It integrates the DJI Matrice 100 into the ROS landscape, facilitating prototyping
+            and testing phases in a robotics development pipeline.</p>
+
+        <h2 style="margin-top: 3rem;">Key Features</h2>
+        <ul class="feature-list">
+            <li><strong>HITL Simulation:</strong> Ability to simulate HITL testing in Gazebo, emulated in DJI Assistant.
+            </li>
+            <li><strong>SITL Spawning:</strong> Ability to spawn SITL robots without real hardware.</li>
+            <li><strong>Heterogeneous Swarms:</strong> Ability to spawn multiple robots in mixed HITL/SITL settings
+                (e.g., 2 HITL + 9 SITL).</li>
+            <li><strong>Collision Awareness:</strong> Integrated collision detection with the environment and other
+                agents.</li>
+        </ul>
+
+        <p>This integration opens the way for quality and competent robotics software development by eliminating the
+            necessity of on-site tests in early development stages.</p>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

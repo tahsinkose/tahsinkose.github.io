@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborator | Tahsincan Köse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .project-hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="glass-panel"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 100; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo" style="font-weight: 700; font-size: 1.2rem;">Tahsincan <span
+                style="color: var(--accent-color);">Köse</span></div>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--text-primary); font-size: 0.9rem;">Back to Home</a>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <h1>Collaborator</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 1rem;">Human-Robot Interaction & Safety
+        </p>
+        <div class="tech-stack">
+            <span class="tech-badge">ROS Kinetic</span>
+            <span class="tech-badge">OpenCV</span>
+            <span class="tech-badge">Gazebo</span>
+            <span class="tech-badge">UR5 Manipulator</span>
+            <span class="tech-badge">Kinect 2</span>
+        </div>
+    </section>
+
+    <section class="project-content glass-panel">
+        <img src="assets/img/collaborator.jpg" alt="Collaborator Project"
+            style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+
+        <h2>Project Overview</h2>
+        <p>Robotic arm application that collaboratively operates with human workers in a shared workspace. The
+            application involves Motion Planning and Object & Human parts (torso, arms) Recognition.</p>
+
+        <p>The end product has been ported with a safety layer that stops the robot at the instant there is an
+            unpredictable force given to the joint ESCs. The perception system recognizes a human worker around it with
+            perfect accuracy (with a non-learning image recognition method, this is ensured, but with more assumptions
+            in the workspace).</p>
+
+        <p>After human worker leaves the workspace, the robot continues its groovy Pick & Place task, if the condition
+            for picking still satisfies. Otherwise it goes back to its rest pose.</p>
+
+        <h2 style="margin-top: 3rem;">Hardware & Technologies</h2>
+        <ul class="feature-list">
+            <li><strong>UR5 Manipulator Arm:</strong> Primary robotic hardware for manipulation tasks.</li>
+            <li><strong>Kinect 2:</strong> Depth sensing for workspace monitoring and human detection.</li>
+            <li><strong>ROS Kinetic:</strong> Middleware for system integration and communication.</li>
+            <li><strong>OpenCV:</strong> Computer vision library for object and human recognition.</li>
+            <li><strong>Gazebo:</strong> Simulation environment for testing safety protocols.</li>
+        </ul>
+
+        <h2 style="margin-top: 3rem;">Project Demo</h2>
+        <a href="https://www.youtube.com/watch?v=24GcJpnKApU" target="_blank" class="video-thumbnail"
+            style="display: block; position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 12px; overflow: hidden; margin-top: 1rem; background-image: url('https://img.youtube.com/vi/24GcJpnKApU/maxresdefault.jpg'); background-size: cover; background-position: center;">
+            <div
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; transition: background 0.3s;">
+                <div
+                    style="width: 64px; height: 64px; background: rgba(255,0,0,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" />
+                    </svg>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

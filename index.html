@@ -38,13 +38,14 @@
     <section class="hero container">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 4rem;">
             <div class="hero-content">
-                <span class="hero-subtitle">System Status: Online</span>
                 <h1>Building the <span style="color: var(--accent-color);">Brains</span> of Robots.<br>Exploring the
                     Future of <span style="color: var(--accent-color);">Finance</span>.</h1>
                 <p style="font-size: 1.2rem; max-width: 600px;">
                     Robotics Software Engineer specializing in manipulation, motion planning, and AI-driven control
                     systems.
-                    Also built HisseVergiBeyan to automate tax calculations for Turkish investors.
+                    Also built <a href="https://hissevergibeyan.com" target="_blank"
+                        style="color: var(--accent-color); text-decoration: none; border-bottom: 2px solid var(--accent-color);">hissevergibeyan.com</a>
+                    to automate tax calculations for Turkish investors.
                 </p>
                 <div style="margin-top: 2rem;">
                     <a href="#projects" class="btn btn-primary">View Work</a>
@@ -53,10 +54,8 @@
                         in Touch</a>
                 </div>
             </div>
-            <div style="flex-shrink: 0;">
-                <img src="assets/img/profile.png" alt="Tahsincan Köse"
-                    style="width: 350px; height: auto; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
-            </div>
+            <img src="assets/img/profile.png" alt="Tahsincan Köse" style="width: 350px; height: 350px; object-fit: cover; object-position: 50% 20%; border-radius: 50%;
+                box-shadow: 0 8px 32px rgba(22, 18, 18, 0.15);">
         </div>
     </section>
     </section>
@@ -84,7 +83,6 @@
 
             <div class="glass-panel card">
                 <h3>AI for Robotics</h3>
-                <p class="card-subtitle">Perception & Learning</p>
                 <ul class="tech-list">
                     <li><span>PyTorch</span></li>
                     <li><span>TensorFlow</span></li>
@@ -99,14 +97,29 @@
     </section>
 
     <section id="projects" class="container" style="padding: 6rem 2rem;">
-        <h2 style="text-align: center; margin-bottom: 4rem;">Selected <span
-                style="color: var(--accent-color);">Deployments</span></h2>
+        <h2 style="text-align: center; margin-bottom: 4rem;"><span style="color: var(--accent-color);">
+                Portfolio</span></h2>
 
         <div class="grid-3">
             <!-- Project 1 -->
             <div class="glass-panel card">
-                <img src="assets/img/collaborator.jpg" alt="Collaborator Project" class="card-img">
-                <h3>Collaborator</h3>
+                <a href="aeolus.html" style="text-decoration: none; color: inherit;">
+                    <img src="assets/img/aeolus.png" alt="Aeolus Robotics - Aeo" class="card-img">
+                    <h3>Aeolus Robotics</h3>
+                </a>
+                <p class="card-subtitle">Senior Robotics Software Engineer</p>
+                <p>6+ years developing manipulation pipelines for Aeo humanoid robot. Leading behavior design, motion
+                    planning, and safety-critical systems for autonomous service robots.</p>
+                <div class="tech-tags">
+                    <span>Manipulation</span><span>MoveIt</span><span>ROS</span><span>Fleet-wide</span>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="glass-panel card">
+                <a href="collaborator.html" style="text-decoration: none; color: inherit;">
+                    <img src="assets/img/collaborator.jpg" alt="Collaborator Project" class="card-img">
+                    <h3>Collaborator</h3>
+                </a>
                 <p class="card-subtitle">Human-Robot Interaction</p>
                 <p>Collaborative pick & place with UR5 manipulator and Kinect 2. Features real-time human recognition
                     and safety layers.</p>
@@ -115,10 +128,12 @@
                 </div>
             </div>
 
-            <!-- Project 2 -->
+            <!-- Project 3 -->
             <div class="glass-panel card">
-                <img src="assets/img/rrt.png" alt="RRT Library" class="card-img">
-                <h3>RRT Library</h3>
+                <a href="rrt-library.html" style="text-decoration: none; color: inherit;">
+                    <img src="assets/img/rrt.png" alt="RRT Library" class="card-img">
+                    <h3>High Performance RRT Library</h3>
+                </a>
                 <p class="card-subtitle">Path Planning</p>
                 <p>High-performance C++ library for RRT, RRT*, and BiRRT* algorithms using Template Meta-Programming.
                 </p>
@@ -127,22 +142,27 @@
                 </div>
             </div>
 
-            <!-- Project 3 -->
+            <!-- Project 4 -->
             <div class="glass-panel card">
-                <img src="assets/img/swarm.jpg" alt="Swarm UAV" class="card-img">
-                <h3>Swarm UAV</h3>
-                <p class="card-subtitle">Autonomous Systems</p>
-                <p>Proprietary R&D for swarm UAVs. Developed HITL stack, ROS cross-compilation, and ad-hoc mesh
-                    networking.</p>
+                <a href="https://hissevergibeyan.com" target="_blank" style="text-decoration: none; color: inherit;">
+                    <img src="assets/img/hissevergibeyan.png" alt="HisseVergiBeyan" class="card-img">
+                    <h3>hissevergibeyan.com</h3>
+                </a>
+                <p class="card-subtitle">Fintech - Tax Automation</p>
+                <p>Tax-reporting assistant automating profit/loss calculations for Turkish investors trading on foreign
+                    exchanges.</p>
                 <div class="tech-tags">
-                    <span>DJI M100</span><span>Mesh Net</span><span>Swarm</span>
+                    <span>C# .Net</span><span>Python</span><span>NextJS</span><span>PostgreSQL</span><span>Robot
+                        Framework</span>
                 </div>
             </div>
 
-            <!-- Project 4 -->
+            <!-- Project 5 -->
             <div class="glass-panel card">
-                <img src="assets/img/moveit.jpg" alt="Hector MoveIt" class="card-img">
-                <h3>Hector MoveIt</h3>
+                <a href="hector-moveit.html" style="text-decoration: none; color: inherit;">
+                    <img src="assets/img/hector_rviz.png" alt="Hector MoveIt" class="card-img">
+                    <h3>Hector MoveIt</h3>
+                </a>
                 <p class="card-subtitle">Manipulation & Control</p>
                 <p>Integrated MoveIt framework with Hector Quadrotor stack for innovative aerial manipulation
                     capabilities.</p>
@@ -151,10 +171,12 @@
                 </div>
             </div>
 
-            <!-- Project 5 -->
+            <!-- Project 6 -->
             <div class="glass-panel card">
-                <img src="assets/img/dji.png" alt="DJI Simulation" class="card-img">
-                <h3>DJI Simulation</h3>
+                <a href="dji-simulation.html" style="text-decoration: none; color: inherit;">
+                    <img src="assets/img/dji.png" alt="DJI Simulation" class="card-img">
+                    <h3>DJI Simulation</h3>
+                </a>
                 <p class="card-subtitle">Sim-to-Real</p>
                 <p>Comprehensive Gazebo stack for DJI M100 supporting both HITL (Hardware-in-the-Loop) and SITL modes.
                 </p>
@@ -164,59 +186,15 @@
             </div>
 
 
-            <!-- Project 6 -->
-            <div class="glass-panel card">
-                <img src="assets/img/aeolus.png" alt="Aeolus Robotics - Aeo" class="card-img">
-                <h3>Aeolus Robotics</h3>
-                <p class="card-subtitle">Senior Robotics Software Engineer</p>
-                <p>6+ years developing manipulation pipelines for Aeo humanoid robot. Leading behavior design, motion
-                    planning, and safety-critical systems for autonomous service robots.</p>
-                <div class="tech-tags">
-                    <span>Manipulation</span><span>MoveIt</span><span>ROS</span><span>Fleet-wide</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="fintech" class="container" style="padding: 6rem 2rem; position: relative;">
-        <div class="glass-panel" style="padding: 4rem; border-left: 4px solid #FFD700;">
-            <!-- Gold accent for Fintech -->
-            <div class="grid-2">
-                <div>
-                    <h2>Fintech <span style="color: #DAA520;">Venture</span></h2>
-                    <p style="font-size: 1.1rem; margin-bottom: 2rem;">
-                        Built HisseVergiBeyan — a tax-reporting assistant automating profit/loss calculations for
-                        Turkish investors trading on foreign exchanges.
-                    </p>
-                    <ul class="feature-list">
-                        <li><strong>Automated Reporting:</strong> Handles splits, delistings, and currency adjustments.
-                        </li>
-                        <li><strong>Tax Compliance:</strong> Detailed filings for Turkish tax authorities.</li>
-                        <li><strong>Production:</strong> Serving users at hissevergibeyan.com.</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary" style="background-color: #DAA520; margin-top: 1rem;">View
-                        Venture</a>
-                </div>
-                <div style="display: flex; align-items: center; justify-content: center;">
-                    <!-- Abstract Chart Viz -->
-                    <div class="chart-viz">
-                        <div class="bar" style="height: 40%;"></div>
-                        <div class="bar" style="height: 70%;"></div>
-                        <div class="bar" style="height: 50%;"></div>
-                        <div class="bar" style="height: 90%;"></div>
-                        <div class="bar" style="height: 60%;"></div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
     <section id="contact" class="container" style="padding: 6rem 2rem; text-align: center;">
         <div style="margin-top: 2rem;">
             <a href="mailto:tahsincankose@gmail.com" class="btn btn-primary">Send Signal</a>
-            <a href="https://github.com" class="btn"
+            <a href="https://github.com/tahsinkose" class="btn"
                 style="background: white; border: 1px solid #ddd; margin-left: 1rem;">GitHub</a>
-            <a href="https://linkedin.com" class="btn"
+            <a href="https://linkedin.com/in/tahsincankose" class="btn"
                 style="background: white; border: 1px solid #ddd; margin-left: 1rem;">LinkedIn</a>
         </div>
     </section>

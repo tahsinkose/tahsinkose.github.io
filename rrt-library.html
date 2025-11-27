@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRT Library | Tahsincan Köse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .project-hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .project-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .tech-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="glass-panel"
+        style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 1200px; z-index: 100; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <div class="logo" style="font-weight: 700; font-size: 1.2rem;">Tahsincan <span
+                style="color: var(--accent-color);">Köse</span></div>
+        <div class="nav-links">
+            <a href="index.html" style="color: var(--text-primary); font-size: 0.9rem;">Back to Home</a>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <h1>RRT Library</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 1rem;">High-Performance Path Planning</p>
+        <div class="tech-stack">
+            <span class="tech-badge">C++</span>
+            <span class="tech-badge">Template Meta-Programming</span>
+            <span class="tech-badge">Algorithms</span>
+            <span class="tech-badge">Motion Planning</span>
+        </div>
+    </section>
+
+    <section class="project-content glass-panel">
+        <img src="assets/img/rrt.png" alt="RRT Library" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+
+        <h2>Project Overview</h2>
+        <p>Rapidly Exploring Random Trees (RRTs) is a famous algorithm family for solving path/motion planning problems
+            that are generally encountered in robotics applications. They are known to outperform deterministic path
+            planners in highly cluttered/unknown environments due to their probabilistic nature.</p>
+
+        <p>The RRT library has been initiated with four RRT variants, each building on top of the previous one:</p>
+        <ul class="feature-list">
+            <li><strong>RRT:</strong> Basic Rapidly-exploring Random Tree.</li>
+            <li><strong>RRT*:</strong> Asymptotically optimal RRT.</li>
+            <li><strong>BiRRT*:</strong> Bidirectional RRT* for faster convergence.</li>
+            <li><strong>BiRRT* /w Heuristics:</strong> Optimized bidirectional search.</li>
+        </ul>
+
+        <p>The library is implemented in C++ with as much as possible compile-time programming provided through Template
+            Meta-Programming (TMP). Due to its compile-time nature, it is quite efficient when compared to other
+            research candidates.</p>
+
+        <h2 style="margin-top: 3rem;">Visualizations</h2>
+        <div class="grid-2" style="margin-top: 2rem;">
+            <div class="glass-panel" style="padding: 1rem;">
+                <img src="assets/img/rrt_connect_2d.png" alt="RRT Connect 2D" style="width: 100%; border-radius: 8px;">
+                <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">RRT
+                    Connect 2D</p>
+            </div>
+            <div class="glass-panel" style="padding: 1rem;">
+                <img src="assets/img/rrt_bid_h_3d.png" alt="BiRRT* with Heuristics 3D"
+                    style="width: 100%; border-radius: 8px;">
+                <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    BiRRT* with Heuristics 3D</p>
+            </div>
+        </div>
+        <div class="grid-2" style="margin-top: 1rem;">
+            <div class="glass-panel" style="padding: 1rem;">
+                <img src="assets/img/rrt_star_2d.png" alt="RRT* 2D" style="width: 100%; border-radius: 8px;">
+                <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">RRT*
+                    2D</p>
+            </div>
+            <div class="glass-panel" style="padding: 1rem;">
+                <img src="assets/img/rrt_star_bid_2d.png" alt="BiRRT* 2D" style="width: 100%; border-radius: 8px;">
+                <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    BiRRT* 2D</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Technical Details</h2>
+        <p>Boost’s Rtree implementation is used as the underlying fringe for nearest neighbor, search and insert
+            operations. However, for high-dimensional problems, future goals include replacing it with more suitable
+            data structures like Octree or OctoMap.</p>
+
+        <p>The project also explores multi-robot motion planning using sRRT and Subdimensional Expansion, aiming to
+            solve complex coordination problems in cluttered environments.</p>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
